@@ -38,7 +38,7 @@ export class AuthService {
         updated_at: new Date(),
         accountNumber: dvaResponse.data.account_number,
         accountName: dvaResponse.data.account_name,
-        bankName: dvaResponse.data.bank_name,
+        bankName: dvaResponse.data.bank_name || 'Default Bank',
         
         // ...rest of user data
       }

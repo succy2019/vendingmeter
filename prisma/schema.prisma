@@ -9,7 +9,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -19,9 +19,9 @@ model User {
   email         String        @unique
   phone         String
   address       String
-  bankName      String
-  accountNumber String
-  accountName   String
+  bankName      String?
+  accountNumber String?
+  accountName   String?
   meter         String
   walletBalance Float         @default(0)
   Transaction   Transaction[]
