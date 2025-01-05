@@ -212,7 +212,7 @@ if (loginForm) {
                 throw new Error(data.message || 'Login failed');
             }
         } catch (error) {
-            console.error('Login error:', error);
+            
             alert(error.message || 'An error occurred during login');
         }
     });
