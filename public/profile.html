@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Meter Vending</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="dashboard.html" class="text-xl font-bold">Meter Vending</a>
+            <div class="flex items-center space-x-4">
+                <a href="dashboard.html" class="hover:text-blue-200">Dashboard</a>
+                <a href="profile.html" class="hover:text-blue-200">Profile</a>
+                <button id="logoutButton" class="hover:text-blue-200">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-2xl font-bold mb-6 text-gray-800">User Profile</h1>
+            
+            <!-- Profile Form -->
+            <form id="profileForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <div class="mt-1 flex items-center">
+                            <span id="username" class="block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Email</label>
+                        <div class="mt-1">
+                            <span id="userEmail" class="block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></span>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <div class="mt-1">
+                            <span id="userPhone" class="block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></span>
+                        </div>
+                    </div>
+
+                    <!-- Meter Number -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Meter Number</label>
+                        <div class="mt-1">
+                            <span id="meterNumber" class="block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></span>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700">Address</label>
+                        <div class="mt-1">
+                            <span id="userAddress" class="block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></span>
+                        </div>
+                    </div>
+
+                    <!-- Account Statistics -->
+                    <div class="md:col-span-2 grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <label class="block text-sm font-medium text-gray-700">Wallet Balance</label>
+                            <span id="walletBalance" class="text-xl font-bold text-blue-600"></span>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <label class="block text-sm font-medium text-gray-700">Available Units</label>
+                            <span id="totalUnits" class="text-xl font-bold text-green-600"></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Action Buttons -->
+            <div class="mt-6 flex justify-end space-x-4">
+                <button id="editProfileBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Edit Profile
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
