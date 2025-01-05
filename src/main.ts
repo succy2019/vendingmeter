@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
+import * as express from 'express';
 import * as session from 'express-session';
 
 async function bootstrap() {
@@ -11,14 +12,10 @@ async function bootstrap() {
   
   app.use(
     session({
-      secret: 'your-secret-key',
+      secret: 'sk_live_3bde0c227c2c81932539c8313b0c7349abcafd80',
       resave: false,
       saveUninitialized: false,
-      cookie: {
-        maxAge: 24 * 60 * 60 * 1000, // 24 hours
-        secure: process.env.NODE_ENV === 'production',
-        httpOnly: true
-      }
+      cookie: { secure: false },
     })
   );
 
